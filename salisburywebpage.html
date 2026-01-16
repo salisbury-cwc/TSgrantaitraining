@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kristy Salisbury | Project Director</title>
+    <style>
+        :root {
+            --cwc-rust: #a33c00;
+            --cwc-dark: #333333;
+            --cwc-light: #f4f4f4;
+            --white: #ffffff;
+            --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--cwc-light);
+            color: var(--cwc-dark);
+            line-height: 1.6;
+        }
+
+        /* Header Section */
+        header {
+            background-color: var(--cwc-rust);
+            color: var(--white);
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        header h2 {
+            font-size: 1.2rem;
+            font-weight: 400;
+            margin-top: 0.5rem;
+            opacity: 0.9;
+        }
+
+        /* Container */
+        .container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Profile Card */
+        .profile-card {
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 2rem;
+        }
+
+        .profile-header {
+            padding: 2rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .profile-header h3 {
+            color: var(--cwc-rust);
+            margin-bottom: 1rem;
+        }
+
+        .profile-content {
+            padding: 2rem;
+        }
+
+        /* Sections */
+        section {
+            margin-bottom: 2rem;
+        }
+
+        h3.section-title {
+            color: var(--cwc-rust);
+            border-left: 5px solid var(--cwc-rust);
+            padding-left: 10px;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        /* List Styling */
+        ul {
+            list-style-position: inside;
+            margin-bottom: 1rem;
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Button Styling */
+        .btn {
+            display: inline-block;
+            background-color: var(--cwc-rust);
+            color: var(--white);
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #802f00;
+        }
+
+        /* Modal (Popup) */
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            background-color: rgba(0,0,0,0.5); 
+            animation: fadeIn 0.4s;
+        }
+
+        .modal-content {
+            background-color: var(--white);
+            margin: 15% auto; 
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; 
+            max-width: 500px;
+            border-radius: 8px;
+            position: relative;
+            text-align: center;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover {
+            color: var(--cwc-dark);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--cwc-dark);
+            color: #bbb;
+            font-size: 0.9rem;
+            margin-top: 3rem;
+        }
+
+        footer a {
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+
+        /* Responsive */
+        @media (min-width: 768px) {
+            .profile-card {
+                flex-direction: row;
+            }
+            .profile-header {
+                flex: 1;
+                background-color: #f9f9f9;
+                border-right: 1px solid #eee;
+                border-bottom: none;
+            }
+            .profile-content {
+                flex: 2;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Kristy Salisbury</h1>
+        <h2>Project Director, Central Wyoming College</h2>
+    </header>
+
+    <div class="container">
+        
+        <div class="profile-card">
+            <div class="profile-header">
+                <h3>Contact & Role</h3>
+                <p><strong>Title:</strong> Project Director</p>
+                <p><strong>Department:</strong> TRIO / Talent Search</p>
+                <p><strong>Institution:</strong> Central Wyoming College</p>
+                <br>
+                <button class="btn" onclick="openModal()">Get in Touch</button>
+            </div>
+            <div class="profile-content">
+                <h3 class="section-title">About Me</h3>
+                <p>
+                    As a dedicated <strong>Project Director</strong> at Central Wyoming College, I specialize in student success initiatives. My work primarily focuses on the <strong>TRIO Talent Search</strong> program, where I lead efforts to identify and assist individuals from disadvantaged backgrounds who have the potential to succeed in higher education.
+                </p>
+                <p>
+                    My professional philosophy centers on removing barriers to education. Whether it is providing academic counseling, financial guidance, or career planning, I am committed to empowering students in the Riverton community and beyond.
+                </p>
+                <p>
+                    <em>Community Leadership:</em> In addition to my academic role, I have served as a <strong>Riverton City Council Member</strong>, advocating for local development and civic engagement.
+                </p>
+            </div>
+        </div>
+
+        <section>
+            <h3 class="section-title">Institutional Focus: Central Wyoming College</h3>
+            <p>
+                Central Wyoming College (CWC) is a designated Native American Serving Non-Tribal Institution (NASNTI) with a mission deeply rooted in community empowerment. My work aligns with the college's core values:
+            </p>
+            <ul>
+                <li><strong>Mission:</strong> "Succeeding Together Against All Odds." We focus on serving students from Fremont, Hot Springs, and Teton counties.</li>
+                <li><strong>TRIO Programs:</strong> As part of the Student Affairs division, our department plays a critical role in supporting first-generation and low-income students through programs like Talent Search, Upward Bound, and Student Support Services.</li>
+                <li><strong>Community Impact:</strong> CWC acts as a cultural and educational hub in Riverton, bridging the gap between secondary education and workforce development.</li>
+            </ul>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Kristy Salisbury. All rights reserved.</p>
+        <p>Central Wyoming College | Riverton, WY</p>
+    </footer>
+
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h3 style="color:var(--cwc-rust); margin-bottom:15px;">Contact Information</h3>
+            <p>You can reach me via email at:</p>
+            <p style="font-size: 1.2rem; font-weight: bold; margin: 15px 0;">
+                <a href="mailto:kristys@cwc.edu" style="color: var(--cwc-dark); text-decoration: underline;">kristys@cwc.edu</a>
+            </p>
+            <p style="font-size: 0.9rem; color: #666;">Riverton Campus, Student Affairs</p>
+        </div>
+    </div>
+
+    <script>
+        // Modal Logic
+        const modal = document.getElementById("contactModal");
+
+        function openModal() {
+            modal.style.display = "block";
+            console.log("Profile view: Contact modal opened.");
+        }
+
+        function closeModal() {
+            modal.style.display = "none";
+        }
+
+        // Close modal if user clicks outside the box
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        // Dynamic Greeting in Console
+        const hour = new Date().getHours();
+        let greeting;
+        if (hour < 12) greeting = "Good Morning";
+        else if (hour < 18) greeting = "Good Afternoon";
+        else greeting = "Good Evening";
+        
+        console.log(`${greeting}! Welcome to Kristy Salisbury's profile page.`);
+    </script>
+
+</body>
+</html>
