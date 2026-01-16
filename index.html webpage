@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kristy Salisbury - Profile | Central Wyoming College</title>
+    <style>
+        :root {
+            --cwc-rust: #D44500; /* Approximate Rustler Orange */
+            --cwc-navy: #003366; /* Approximate Navy */
+            --cwc-dark: #333333;
+            --cwc-light: #f4f4f4;
+            --white: #ffffff;
+            --shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--cwc-light);
+            color: var(--cwc-dark);
+            line-height: 1.6;
+        }
+
+        /* Header / Hero Section */
+        header {
+            background: linear-gradient(135deg, var(--cwc-navy) 0%, #001f3f 100%);
+            color: var(--white);
+            padding: 3rem 1rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: -50px;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: var(--cwc-light);
+            transform: skewY(-3deg);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .profile-card {
+            background: var(--white);
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            margin-top: -60px;
+            padding: 0;
+            position: relative;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        /* Profile Grid */
+        .profile-header {
+            display: flex;
+            flex-wrap: wrap;
+            border-bottom: 1px solid #eee;
+        }
+
+        .profile-image-container {
+            flex: 1 1 300px;
+            background-color: #e0e0e0;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .profile-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+        }
+
+        /* Fallback Initials Avatar */
+        .avatar-initials {
+            font-size: 4rem;
+            font-weight: bold;
+            color: var(--cwc-navy);
+        }
+
+        .profile-info {
+            flex: 2 1 400px;
+            padding: 2.5rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--cwc-navy);
+            margin-bottom: 0.5rem;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            color: var(--cwc-rust);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-list {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .contact-list li {
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            font-size: 1.05rem;
+        }
+
+        .contact-list i {
+            margin-right: 12px;
+            color: var(--cwc-rust);
+            width: 20px;
+            text-align: center;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--cwc-rust);
+            color: var(--white);
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #b33a00;
+        }
+
+        /* Content Sections */
+        .content-section {
+            padding: 2.5rem;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: var(--cwc-navy);
+            margin-bottom: 1rem;
+            border-left: 5px solid var(--cwc-rust);
+            padding-left: 15px;
+        }
+
+        .bio-text {
+            color: #555;
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 2rem;
+        }
+
+        .skill-tag {
+            background: #f0f4f8;
+            padding: 10px 15px;
+            border-radius: 6px;
+            color: var(--cwc-navy);
+            font-weight: 600;
+            text-align: center;
+            border: 1px solid #dae1e7;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+            color: #777;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Tweaks */
+        @media (max-width: 768px) {
+            .profile-header {
+                flex-direction: column;
+            }
+            .profile-image-container {
+                min-height: 250px;
+            }
+            h1 { font-size: 2rem; }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <p>Central Wyoming College Directory</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <main class="profile-card">
+            <div class="profile-header">
+                <div class="profile-image-container">
+                    <div class="avatar-initials">KS</div>
+                </div>
+                <div class="profile-info">
+                    <h1>Kristy Salisbury</h1>
+                    <h2>Program Manager - Talent Search</h2>
+                    
+                    <ul class="contact-list">
+                        <li>
+                            <i class="fas fa-building"></i> 
+                            Student Affairs, Central Wyoming College
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i> 
+                            Riverton Campus, Wyoming
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i> 
+                            <a href="mailto:ksalisbury@cwc.edu" style="color: inherit; text-decoration: none;">ksalisbury@cwc.edu</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i> 
+                            (307) 855-2114
+                        </li>
+                    </ul>
+
+                    <button id="contactBtn" class="btn">Send a Message</button>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h3 class="section-title">About Me</h3>
+                <p class="bio-text">
+                    I serve as the Program Manager for the <strong>Talent Search</strong> program at Central Wyoming College. My mission is to identify and assist individuals from disadvantaged backgrounds who have the potential to succeed in higher education.
+                </p>
+                <p class="bio-text">
+                    In the Student Affairs department, I work to provide academic, career, and financial counseling to participants, encouraging them to graduate from high school and complete their postsecondary education. I am passionate about increasing educational access and helping youth navigate the path to college success.
+                </p>
+
+                <h3 class="section-title">Areas of Expertise</h3>
+                <div class="skills-grid">
+                    <div class="skill-tag">TRIO Programs</div>
+                    <div class="skill-tag">Academic Counseling</div>
+                    <div class="skill-tag">Financial Aid Support</div>
+                    <div class="skill-tag">Career Exploration</div>
+                    <div class="skill-tag">Youth Mentoring</div>
+                    <div class="skill-tag">Grant Management</div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Central Wyoming College. All Rights Reserved.</p>
+        <p style="font-size: 0.8rem; margin-top: 5px;">This profile is generated for demonstration purposes.</p>
+    </footer>
+
+    <script>
+        // Dynamic Year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Contact Button Interaction
+        const contactBtn = document.getElementById('contactBtn');
+        
+        contactBtn.addEventListener('click', function() {
+            // In a real scenario, this would open a modal or form
+            // For this static profile, we simulate an action
+            const email = "ksalisbury@cwc.edu";
+            const subject = "Inquiry from CWC Profile";
+            const body = "Hello Kristy,\n\nI would like to connect regarding the Talent Search program...";
+            
+            // Construct mailto link
+            const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            
+            // Trigger the mail client
+            window.location.href = mailtoLink;
+            
+            // Visual feedback
+            this.textContent = "Opening Email Client...";
+            this.style.backgroundColor = "#003366";
+            
+            setTimeout(() => {
+                this.textContent = "Send a Message";
+                this.style.backgroundColor = ""; // Reset to CSS default
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
